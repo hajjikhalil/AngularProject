@@ -1,0 +1,17 @@
+{{titre}}
+<div  class="m-2"*ngFor="let e of listeArticles ">
+    <div *ngIf="e.categorie!='travail'"  >
+    <div class="card" style="width: 18rem;" [ngStyle]="{color: e.categorie == 'Education' ? 'blue' : 'black'}">
+      <div class="card-body" >
+        <h5 class="card-title">{{e.titre}}</h5>
+        <h5 class="card-subtitle mb-2 text-muted">{{e.auteur}}</h5>
+        <h5 class="card-subtitle mb-2 text-muted">{{e.date}}</h5>
+        <h5 class="card-subtitle mb-2 text-muted">{{e.contenu}}</h5>
+
+
+    </div>
+
+    </div>
+    </div>
+  </div>
+  <input type="number" [(ngModel)]="somme">

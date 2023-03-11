@@ -1,0 +1,14 @@
+<ul>
+    <li *ngFor="let emploi of listeEmploi">
+      <h3>{{emploi.reference}}</h3>
+      <p>{{ emploi.titre }}</p>
+      <p>Entreprise : {{ emploi.entreprise}}</p>
+      <button [disabled]="!emploi.etat">Postuler</button>
+    </li>
+    <button (click)="calculerNombreOffresNonCloturees()">Bilan</button>
+    <form (submit)="rechercher()">
+        <label>Chercher par entreprise:</label>
+        <input type="text" [(ngModel)]="nomEntreprise">
+        <button type="submit">Rechercher</button>
+      </form>
+  </ul>
