@@ -28,6 +28,7 @@
 {{p.quantity}}
 {{p.like}}
 <input type="submit" value="buy" [disabled]="p.quantity==0">
+<button type="button" class="btn btn-primary">Primary</button>
 
 <div *ngIf="p.quantity==0">
 <input type="submit" value="buy" disabled>

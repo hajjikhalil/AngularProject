@@ -13,12 +13,11 @@ listeArticles: Article[] =[
   {titre:"Les nouveaux parents",contenu:"les nouveau parent",auteur:"ahmed said ",date:"11/11/2018" ,categorie:"Education"},
   {titre:"comment ecrire votre cv ",contenu:"pour reussir a decraucher un emploi ",auteur:"marie elsa",date:"02/04/2017" ,categorie:"travail"}
 ]
-somme : any;
+somme : number = 0;
 
   constructor() { }
 
   ngOnInit(): void {
-  this.somme;
   }
   Somme(){
     this.somme = this.listeArticles.filter(a=>a.categorie!='travail').length;

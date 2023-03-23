@@ -1,0 +1,11 @@
+fieldset {
+    border: 1px solid #ccc; /* ajoute une bordure autour du fieldset */
+    padding: 20px; /* ajoute de l'espace autour des éléments du fieldset */
+  }
+  
+  legend {
+    font-size: 1.2em; /* augmente la taille de police de la légende */
+    font-weight: bold; /* rend la légende en gras */
+    margin-bottom: 10px; /* ajoute de l'espace en dessous de la légende */
+  }
+  

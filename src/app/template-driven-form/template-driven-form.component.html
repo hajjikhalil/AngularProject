@@ -1,0 +1,60 @@
+<form #f="ngForm"> 
+    <fieldset>
+        <legend> informations générales </legend>
+    <label>     Nom:     </label>
+
+      <input type="text" name="nom" ngModel required #nom="ngModel">
+      <div *ngIf="nom.invalid && nom.touched">
+        <div *ngIf="nom.errors?.['required']">
+            required
+        </div>
+      </div>
+    <br>
+    <label>    Email:     </label>
+      <input type="email" name="email" ngModel required #email="ngModel" pattern="pattern(/^[a-zA-Z0-9._]+@[a-zA-Z0-9]+\.[a-zA-Z]{3}$/)">
+      <div *ngIf="email.invalid && email.touched">
+        <div *ngIf="email.errors?.['required']">
+            required
+        </div>
+        <div *ngIf="email.errors?.['pattern']">
+            email non valid
+        </div>
+      </div>
+    <br>
+    <fieldset>
+    <legend>informations de paiement</legend>
+    <label>type de carte:       </label>
+        <input type="text" name="type carte" ngModel required #type="ngModel">
+        <div *ngIf="type.invalid && type.touched">
+            <div *ngIf="type.errors?.['required']">
+                required
+            </div>
+          </div>
+      <br>
+      <label> numéro de la carte:       </label>
+        <input type="number" name="num carte" ngModel required #numero="ngModel" pattern="(/^\d{16}$/)">
+        <div *ngIf="numero.invalid && numero.touched">
+            <div *ngIf="numero.errors?.['required']">
+                required
+            </div>
+            <div *ngIf="numero.errors?.['pattern']">
+                numero non valid
+            </div>
+          </div>
+      <br>
+      <label> date expiration:       </label>
+        <input type="date" name="date exp" ngModel required #date="ngModel">
+        <div *ngIf="date.invalid && date.touched">
+            <div *ngIf="date.errors?.['required']">
+                required
+            </div>
+          </div>
+      <br>
+      <label> code:       </label>
+        <input type="text" name="code" [disabled]="type.invalid && numero.invalid && date.invalid">
+    </fieldset>
+ 
+    <button type="submit" [disabled]="f.invalid">Soumettre</button>
+</fieldset>
+  </form>
+  
