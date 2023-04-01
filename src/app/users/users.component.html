@@ -1,0 +1,24 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">name</th>
+        <th scope="col">username</th>
+        <th scope="col">email</th>
+
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr  *ngFor="let u of listUsers">
+        <td>{{u.id}}</td>
+        <td>{{u.name}}</td>
+        <td>{{u.username}}</td>
+        <td>{{u.email}}</td>
+    </tr>
+    <input type="text" [(ngModel)]="input">
+    <button type="submit" (click)="getNumberOf()">verifier</button>
+    {{message}}
+
+    </tbody>
+  </table>

@@ -1,0 +1,18 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">USER_ID</th>
+        <th scope="col">Title</th>
+        <th scope="col">Completed</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr  *ngFor="let t of listTodo">
+        <td>{{t.userId}}</td>
+        <td>{{t.title}}</td>
+        <td>{{t.completed}}</td>
+    </tr>
+    <button type="submit" (click)="pourcentage()">Bilan</button>
+    </tbody>
+  </table>

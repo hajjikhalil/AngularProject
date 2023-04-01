@@ -10,6 +10,8 @@ import { FormsModule } from '@angular/forms';
 import { OffresemploiComponent } from './offresemploi/offresemploi.component';
 import { ArticlesComponent } from './articles/articles.component';
 import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
+import { TodoListComponent } from './todo-list/todo-list.component';
+import { UsersComponent } from './users/users.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { TemplateDrivenFormComponent } from './template-driven-form/template-dri
     FooterComponent,
     OffresemploiComponent,
     ArticlesComponent,
-    TemplateDrivenFormComponent
+    TemplateDrivenFormComponent,
+    TodoListComponent,
+    UsersComponent
   ],
   imports: [
     BrowserModule,
